@@ -1,0 +1,6 @@
+{
+    "/api/dev":{
+        "target":"http://INGBTCPIC5DTR98:8080/EISPortalTest/api/authorization/authenticate",
+        "secure":false
+    }
+}

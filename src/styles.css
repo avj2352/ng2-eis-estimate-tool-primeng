@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+@font-face {
+  font-family: 'Centrale Sans';
+  src: url('./assets/fonts/centrale-sans/2E3D5C_1_0.eot');
+  src: url('./assets/fonts/centrale-sans/2E3D5C_1_0.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/centrale-sans/2E3D5C_1_0.woff2') format('woff2'),
+    url('./assets/fonts/centrale-sans/2E3D5C_1_0.woff') format('woff'),
+    url('./assets/fonts/centrale-sans/2E3D5C_1_0.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: #D9E0E7 !important;
+  margin: 0px;
+  font-size: 1em !important;
+}
+
+.ui-panel-titlebar {
+  background-color: #2F8EE5 !important;
+  color: white !important;
+}
+
+.ui-menu {
+  width: auto !important;
+  margin: 0px !important;
+  border: none !important;
+  background-color: #2D353C !important;
+}
+
+.ui-menuitem-text {
+  color: white !important;
+}
+
+.ui-menuitem-icon {
+  color: white !important;
+  font-size: large !important;
+  margin-right: 1em;
+}
+
+.menu-selected {
+  background-color: #F15B2A !important;
+  color: #ffffff;
+}
+
+/* Debugging Layouts
+@media screen and (min-width: 64.063em) {
+  .ui-lg-3 {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 40.063em) {
+  .ui-md-6 {
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .ui-sm-12 {
+    background-color: palevioletred;
+  }
+}
+*/
+

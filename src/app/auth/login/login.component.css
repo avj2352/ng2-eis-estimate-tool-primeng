@@ -1,0 +1,68 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #03121F;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d3c54+0,02111d+100 */
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #0d3c54 0%, #02111d 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #0d3c54 0%, #02111d 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #0d3c54 0%, #02111d 100%);        
+  }
+
+  .login-page img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .login-page h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 30px;
+  }
+  .login-page form {
+    color: black;
+    font-size: 15px;
+    font-family: 'Centrale Sans';
+    margin: 0 auto;
+    width: 30%;
+    flex-direction: column;
+  }
+  .login-page form input {
+    width: 95%;
+    min-width: 150px;
+    padding: 3px;
+    margin: 15px auto;
+    display: block;
+  }
+  .login-page form input.btn {
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 0px;
+  }
+  .login-page form a {
+    display: block;
+    margin: 35px auto 0px;
+    cursor: pointer;
+  }
+  .login-page form .formErrors {
+    color: red;
+  }
+  .login-page footer {
+    align-self: flex-start;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+  
