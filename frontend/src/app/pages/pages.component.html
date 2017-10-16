@@ -1,40 +1,24 @@
-<div class="ui-g ui-g-nopad" id="header">
-  
-    <div class="ui-g-10">
-      <img src="assets/img/logo-clear.svg" id="top-logo"/>
+<!-- Header content goes here -->
+<div class="ui-g-12 ui-g-nopad" id="header">
+    <eis-header></eis-header>
+</div>
+<!-- end:Header content -->
+<!-- Body content goes here -->
+<div class="ui-g ui-g-nopad">
+  <!-- Side bar menu -->
+  <div class="ui-g-1 ui-g-nopad" id="sidegutter">
+    <div id="sidenav">
+      <p-menu #bigMenu [model]="menuItems"></p-menu>
     </div>
-    <div class="ui-g-2" id="notifications">
-      
-    </div>
+  </div>  
+  <div class="ui-g-1 ui-md-2 ui-g-nopad" id="minigutter">    
+    <div id="sidenav-mini">      
+      <p-menu #smallMenu [model]="miniMenuItems"></p-menu>      
+    </div>    
+  </div>  
+  <div id="content-body" class="ui-g-11 ui-md-10">    
+    <router-outlet></router-outlet>    
   </div>
-  
-  <div class="ui-g ui-g-nopad">
-  
-    <div class="ui-g-2 ui-g-nopad" id="sidegutter">
-  
-      <div id="sidenav">
-  
-        <p-menu #bigMenu [model]="menuItems"></p-menu>
-  
-      </div>
-  
-    </div>
-  
-    <div class="ui-g-2 ui-g-nopad" id="minigutter">
-  
-      <div id="sidenav-mini">
-  
-        <p-menu #smallMenu [model]="miniMenuItems"></p-menu>
-  
-      </div>
-  
-    </div>
-  
-    <div id="content-body" class="ui-g-10 ui-g-nopad">
-  
-      <router-outlet></router-outlet>
-  
-    </div>
-  </div>
-  
+</div>
+<!-- end:Body content -->
   

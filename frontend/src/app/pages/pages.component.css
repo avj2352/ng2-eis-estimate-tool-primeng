@@ -1,9 +1,11 @@
 .content-body {
+  font-family: 'Centrale Sans';
   margin-left: 135px;
 }
 
 #header {
-  background-color: #F0F3F5;
+  background-color: #08324F;
+  color: white;
   height: 60px;
   position: fixed;
   top: 0px;
@@ -21,6 +23,7 @@
 }
 
 #sidenav, #sidenav-mini {
+  font-family: 'Centrale Sans' !important;
   height: 100%;
   position: fixed;
   top: 60px;
@@ -29,7 +32,12 @@
   background-color: #2D353C !important;
 }
 
+#sidenav >>> .ui-widget{
+  font-family: 'Centrale Sans' !important;  
+}
+
 #content-body {
+  padding-left: 10%;
   padding-top: 55px;
 }
 
@@ -59,6 +67,10 @@
 */
 @media only screen and (max-width: 400px) {
 
+  #content-body {
+    padding-left: 3%;
+    padding-top: 55px;
+  }
 
   #sidegutter {
     display: none;

@@ -3,11 +3,12 @@
   <h1><strong>Philips</strong> EIS Estimation Tool</h1>
   <form [formGroup] ="loginForm" class="login-form" (ngSubmit)="onSubmit(loginForm.value)">
     <p class="formErrors">{{ loginResponseErrorMsg }}</p>
-    <input name="username" type="text" placeholder="username@philips.com" formControlName="username"/>
+    <input pInputText  name="username" type="text" placeholder="username@philips.com" formControlName="username"/>
     <p *ngIf="loginForm.controls.username.errors" class="formErrors">Username is required/invalid</p>
-    <input name="password" type="password" formControlName="password"/>
+    <input pInputText  name="password" type="password" formControlName="password"/>
     <p *ngIf="loginForm.controls.password.errors" class="formErrors">Password is required</p>
-    <input class="btn btn-primary" type="submit" [disabled]="!loginForm.valid"/>
+    <input pButton class="btn btn-primary" type="submit" [disabled]="!loginForm.valid"/>
+    
     <p><a>Forgot Password ?</a></p>
   </form>
   <footer>

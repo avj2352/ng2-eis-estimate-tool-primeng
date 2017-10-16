@@ -34,8 +34,8 @@ export class PagesComponent implements OnInit, AfterViewInit {
     }
 
     this.menuItems = [
-      {label: 'Dashboard', icon: 'fa-home', routerLink: ['/pages/dashboard'], command: (event) => handleSelected(event)},
-      {label: 'All Times', icon: 'fa-calendar', routerLink: ['/pages/alltimes'], command: (event) => handleSelected(event)},
+      {label: 'All Times', icon: 'fa-home', routerLink: ['/pages/alltimes'], command: (event) => handleSelected(event)},
+      {label: 'Dashboard', icon: 'fa-calendar', routerLink: ['/pages/dashboard'], command: (event) => handleSelected(event)},
       {label: 'My Timesheet', icon: 'fa-clock-o', routerLink: ['/pages/timesheet'], command: (event) => handleSelected(event)},
       {label: 'Add Project', icon: 'fa-tasks', routerLink: ['/pages/projects'], command: (event) => handleSelected(event)},
       {label: 'My Profile', icon: 'fa-users', routerLink: ['/pages/profile'], command: (event) => handleSelected(event)},

@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import {ExtraOptions, RouterModule, Routes} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
-import { MenuModule, PanelModule, ChartModule, InputTextModule, ButtonModule, InputMaskModule, InputTextareaModule, EditorModule, CalendarModule, RadioButtonModule, FieldsetModule, DropdownModule, MultiSelectModule, ListboxModule, SpinnerModule, SliderModule, RatingModule, DataTableModule, ContextMenuModule, TabViewModule, DialogModule, StepsModule, ScheduleModule, TreeModule, GMapModule, DataGridModule, TooltipModule, ConfirmationService, ConfirmDialogModule, GrowlModule, DragDropModule, GalleriaModule } from 'primeng/primeng';
+import { ButtonModule, InputTextModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -13,8 +13,10 @@ import { PagesModule } from './pages/pages.module';
 
 
 const appRoutes: Routes = [  
-  { path: "login", component: LoginComponent },
-  { path: "pages", loadChildren: 'app/pages/pages.module#PagesModule' },  
+  { path: 'login', component: LoginComponent },
+  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },  
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login' },
 ];
 
 const config: ExtraOptions = {
@@ -33,7 +35,9 @@ const config: ExtraOptions = {
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule      
+    BrowserAnimationsModule,
+    ButtonModule,
+    InputTextModule
   ],  
   bootstrap: [AppComponent]
 })

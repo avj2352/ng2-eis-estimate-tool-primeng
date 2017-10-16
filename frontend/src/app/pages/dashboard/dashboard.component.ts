@@ -120,15 +120,9 @@ export class DashboardComponent implements AfterViewInit {
 
       var hoursByTeam = this.hoursByTeamChartDataMixed.datasets;
       var randomised = hoursByTeam.map((dataset) => {
-
         dataset.data = dataset.data.map((hours) => hours * (Math.random() * 2));
-
-      });
-      this.mixedChart.refresh();
+      });      
     });
+  }//end:ngAfterViewInit
 
-  }
-
-
-
-}
+}//end:class-DashboardComponent

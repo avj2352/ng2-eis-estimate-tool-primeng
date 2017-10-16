@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AlltimesComponent } from './alltimes/alltimes.component';
 import { FielderrorsComponent } from './fielderrors/fielderrors.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const pagesRoutes: Routes = [
@@ -45,7 +46,8 @@ const pagesRoutes: Routes = [
     AlltimesComponent,
     ProfileComponent,
     SettingsComponent,
-    FielderrorsComponent
+    FielderrorsComponent,
+    HeaderComponent
   ],
   exports: [RouterModule],  
   imports: [    
