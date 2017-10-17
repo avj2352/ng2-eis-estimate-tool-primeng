@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { Store } from '@ngrx/store';
 //Forms
 import { FormGroup, FormControl, Validators, } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { UIRouterModule ,UIROUTER_DIRECTIVES, StateService } from '@uirouter/angular';
 
 //Custom Components
-// import { ApplicationState } from './../../store/application-state';
-// import { LoginService } from './../../services/login/login.service';
-// import { LoginRequestAction } from './../../store/actions/actions';
+import { ApplicationState } from './../../store/application-state';
+import { LoginService } from './../../services/login/login.service';
+import { LoginRequestAction } from './../../store/actions/actions';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +20,10 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup;
   private loginResponseErrorMsg:string;
 
-  constructor() {
+  constructor(
+    private router:Router,
+    private store:Store<ApplicationState>,
+  ) {
     this.loginResponseErrorMsg = '';
   }//end:constructor
 
@@ -36,13 +39,24 @@ export class LoginComponent implements OnInit {
       password: new FormControl('test', Validators.required)
     });
         
+    //Subscribe for storeValue - 
+    this.store.subscribe((storeValue)=>{      
+      if(storeValue.hasOwnProperty('storeData')){
+        if(storeValue.storeData.login.status==200){
+          this.router.navigateByUrl('/pages');
+        }else{
+          this.loginResponseErrorMsg = storeValue.storeData.login.response;
+        }
+      }//end:storeValue.storeData
 
+      console.log('Store value is: ', storeValue);
+    });//end:subscribe
 
   }//end:ngOnInit
 
   onSubmit(loginForm) { 
     console.log('Form Submitted', loginForm);
-    // this.store.dispatch(new LoginRequestAction({username:loginForm.username,password:loginForm.password}));    
+    this.store.dispatch(new LoginRequestAction({username:loginForm.username,password:loginForm.password}));    
   };//end:onSubmit
 
 }//end:class-LoginComponent
